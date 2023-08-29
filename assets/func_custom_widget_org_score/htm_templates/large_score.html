@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+      :root {
+        --text-color: $textColor
+      }
+
+      html, body {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+      }
+
+      #score-container {
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        max-width: 100%;
+        height: auto;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        text-align: center;
+        font-family: "Amazon Ember", sans-serif;
+        font-size: min(45vw, 55vh);
+        font-weight: bolder;
+        color: var(--text-color);
+      }
+    </style>
+
+</head>
+<body>
+  <div id="score-container">$score</div>
+</body>
+</html>
