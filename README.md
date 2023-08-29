@@ -152,7 +152,7 @@ git clone git@github.com:aws-samples/ec2-flexibility-score-dashboard.git
 #### 2.1 Creating the virtual environment
 
 ```python
-cd flexibility-score
+cd ec2-flexibility-score-dashboard
 python3 -m venv .venv
 ```
 
