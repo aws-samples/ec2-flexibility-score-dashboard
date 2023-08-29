@@ -144,7 +144,7 @@ Follow [these steps](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-c
 After navigating to your path of choice, run this command to clone this repository:
 
 ```bash
-git clone git@ssh.gitlab.aws.dev:bpguasch/flexibility-score.git
+git clone git@github.com:aws-samples/ec2-flexibility-score-dashboard.git
 ```
 
 ### 2. Creating a virtual environment and installing project dependencies
@@ -201,7 +201,8 @@ The deployment process will take roughly **3 minutes** to complete. In the meant
 To update the project, navigate to the directory where you initially cloned the project and execute the following command:
 
 ```bash
-git pull && cdk deploy
+git pull
+cdk deploy
 ```
 
 ## Cleaning up
