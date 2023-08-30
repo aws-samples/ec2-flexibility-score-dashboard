@@ -6,17 +6,17 @@ Authors: Borja Pérez Guasch <bpguasch@amazon.es>, Arpit Sapra <sapraa@amazon.ch
 ## Introduction
 
 EC2 Flexibility Score assesses any configuration used to launch instances through an Auto Scaling Group (ASG) against the recommended EC2
-best practices. It converts the best practice adoption into a “Flexibility Score” that can be used to identify, improve,
+best practices. It converts the best practice adoption into a “flexibility score” that can be used to identify, improve,
 and monitor the configurations (and subsequently, overall organization level adoption of Spot best practices)
 which may have room to improve the flexibility by implementing architectural best practices.
 
-The following illustration shows the Flexibility Score dashboard:
+The following illustration shows the EC2 Flexibility Score Dashboard:
 
 ![image](docs/dashboard.png)
 
 ## In this page
 
-- [Understanding the Flexibility Score](#understanding-the-flexibility-score)
+- [Understanding EC2 Flexibility Score](#understanding-ec2-flexibility-score)
 - [Project architecture](#project-architecture)
 - [Installation](#installation)
 - [Updating](#updating)
@@ -24,11 +24,11 @@ The following illustration shows the Flexibility Score dashboard:
 - [Using the tool](#using-the-tool)
 - [Security considerations](#security-considerations)
 
-## Understanding the Flexibility Score
+## Understanding EC2 Flexibility Score
 
-On a scale of 1 (worse) to 10 (best), the Flexibility score is a weighted average of the four component scores seen below. The higher the score, the more likely a configuration is set up to effectively leverage the latest EC2 features and services.
+On a scale of 1 (worse) to 10 (best), the EC2 Flexibility Score is a weighted average of the four component scores seen below. The higher the score, the more likely a configuration is set up to effectively leverage the latest EC2 features and services.
 
-### Components of the Flexibility Score
+### Components of EC2 Flexibility Score
 
 #### Instance Diversification score (25% weight)
 
