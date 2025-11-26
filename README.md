@@ -30,7 +30,7 @@ On a scale of 1 (worse) to 10 (best), the EC2 Flexibility Score is a weighted av
 
 ### Components of EC2 Flexibility Score
 
-#### Instance Diversification score (25% weight)
+#### Instance Diversification score (25% Weight)
 
 The flexibility to leverage several different instance types improves the likelihood of acquiring the desired EC2 capacity,
 particularly for EC2 Spot instances where instance diversification helps to replace Spot instances which may receive an
@@ -57,7 +57,7 @@ More than 15 or [Attribute-based Instance type selection](https://docs.aws.amazo
 4. Use Karpenter to provision and scale capacity. If you are using node groups and cluster autoscaler with EKS, Karpenter can help improve instance diversification by launching right-sized compute resources in response to changing application load, thereby reducing waste as well as ensuring access to capacity across all eligible instance types. It is an open-source, highly performant cluster autoscaler for Kubernetes.
 5. Use [Spot Placement Score](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-placement-score.html) which indicates how it is that a Spot Request will succeed in an AWS region or an Availability Zone. The open source project [EC2 Spot Placement Score Tracker](https://github.com/aws-samples/ec2-spot-placement-score-tracker) offers the ability to track SPS over time for different configurations.
 
-#### Launch Template score (25% weight)
+#### Launch Template score (25% Weight)
 
 The recommended best practice is to use Launch Templates (LTs), which allow access to the latest instance types and features of
 AWS Auto Scaling groups. Launch configurations (LCs) no longer add support for new Amazon EC2 Instance types that are released after
@@ -72,7 +72,7 @@ Launch Template Score = `vCPU-hours from LTs / (vCPU-hours from LCs + vCPU-hours
 2. [Migrate your Launch Configurations to Launch Templates](https://docs.aws.amazon.com/autoscaling/ec2/userguide/migrate-to-launch-templates.html).
 3. Follow [this workshop](https://ec2spotworkshops.com/ec2-auto-scaling-with-multiple-instance-types-and-purchase-options.html) to familiarise with general Auto Scaling best practices.
 
-#### Policy score (15% weight)
+#### Policy score (15% Weight)
 
 This component measures whether you are leveraging proactive scaling policies such as Predictive scaling (score of 10),
 or reactive scaling policies such as Target Tracking (score of 6.67), or Simple/Step scaling policies (score of 3.33).
@@ -84,7 +84,7 @@ policies across different Auto Scaling groups.
 1. Consider using [Predictive Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-predictive-scaling.html), which uses Machine Learning to predict capacity requirements based on historical usage from CloudWatch. Check out a [hands-on workshop](https://ec2spotworkshops.com/efficient-and-resilient-ec2-auto-scaling/lab1/10-predictive-scaling.html) to implement predictive scaling.
 2. Evaluate if using [Target Tracking Policy](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-target-tracking.html) can better serve your scaling needs than Simple/Step Scaling Policies.
 
-#### Scaling score (35% weight)
+#### Scaling score (35% Weight)
 
 Scaling Score measures the elasticity of the current usage patterns.
 It’s calculated as the ratio of Max Running instances (Peak) to the Minimum running instances (Trough) on any day.
